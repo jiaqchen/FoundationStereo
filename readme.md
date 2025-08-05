@@ -21,9 +21,10 @@ Tremendous progress has been made in deep stereo matching to excel on benchmark 
 </p>
 
 # Changelog
-| Date       | Description                                      |
-|------------|--------------------------------------------------|
-| 2025/07/03 | Improve ONNX and TRT support. Add support for Jetson |
+| Date       | Description                                                                                                         |
+|------------|---------------------------------------------------------------------------------------------------------------------|
+| 2025/08/05 | Our commercial model is available now at [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/foundationstereo)! |
+| 2025/07/03 | Improve ONNX and TRT support. Add support for Jetson                                                                |
 
 
 # Leaderboards 🏆
@@ -57,13 +58,14 @@ Note that `flash-attn` needs to be installed separately to avoid [errors during 
 
 
 # Model Weights
-- Download the foundation model for zero-shot inference on your data from [here](https://drive.google.com/drive/folders/1VhPebc_mMxWKccrv7pdQLTvXYVcLYpsf?usp=sharing). Put the entire folder (e.g. `23-51-11`) under `./pretrained_models/`.
+- Download the foundation model for zero-shot inference on your data. Put the entire folder (e.g. `23-51-11`) under `./pretrained_models/`.
 
 
-| Model | Description |
-| ----- | ----------- |
-| 23-51-11 | Our best performing model for general use, based on Vit-large |
-| 11-33-40 | Slightly lower accuracy but faster inference, based on Vit-small |
+| Model     | Description                                                                 |
+|-----------|-----------------------------------------------------------------------------|
+| [NVIDIA-TAO](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/foundationstereo)       | For commercial usage (slightly different from the original)                 |
+| [23-51-11](https://drive.google.com/drive/folders/1VhPebc_mMxWKccrv7pdQLTvXYVcLYpsf?usp=sharing)  | Our best performing model for general use, based on Vit-large               |
+| [11-33-40](https://drive.google.com/drive/folders/1VhPebc_mMxWKccrv7pdQLTvXYVcLYpsf?usp=sharing)  | Slightly lower accuracy but faster inference, based on Vit-small            |
 
 
 # Run demo
@@ -174,6 +176,9 @@ For dataset license, please check [this](https://github.com/NVlabs/FoundationSte
 
 - Q: I have two or multiple RGB cameras, can I run this? <br>
   A: You can first rectify a pair of images using this [OpenCV function](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html#ga617b1685d4059c6040827800e72ad2b6) into stereo image pair (now they don't have relative rotations), then feed into FoundationStereo.
+
+- Q: Can I use it for commercial purpose? <br>
+  A: We released a commercial version [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/foundationstereo).
 
 
 # BibTeX
