@@ -116,6 +116,7 @@ if __name__=="__main__":
       o3d.io.write_point_cloud(f'{args.out_dir}/cloud_denoise.ply', inlier_cloud)
       pcd = inlier_cloud
 
+    exit()
     logging.info("Visualizing point cloud. Press ESC to exit.")
     vis = o3d.visualization.Visualizer()
     vis.create_window()
